@@ -1,0 +1,273 @@
+/* font-family: 'Inter', sans-serif;
+font-family: 'Manrope', sans-serif; */
+
+:root {
+  --color-white: #ffffff;
+  --color-mainBlack: #3a3a3a;
+  --color-black: #18191f;
+  --primary-color: #e02c6d;
+  --primary-color-tint: #ca2862;
+  --color-yellow: #fb8200;
+  --color-gray: #787885;
+  --color-rating: #5e6366;
+  --color-footer: #0a0826;
+  --main-box: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1;
+  color: var(--color-mainBlack);
+  background-color: var(--color-white);
+}
+
+/**************************/
+/* Common Style */
+/**************************/
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
+.grid--1-cols {
+  grid-template-columns: repeat(1, 1fr);
+}
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid--7-cols {
+  grid-template-columns: repeat(7, 1fr);
+}
+
+/**************************/
+/* Navigation */
+/**************************/
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 3.2rem;
+}
+.main-nav-link:link,
+.main-nav-link:visited {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:focus,
+.main-nav-link:active {
+  color: var(--primary-color);
+}
+/**************************/
+/* Header */
+/**************************/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9.6rem;
+  padding: 0 8.4rem;
+}
+.logo {
+  font-size: 2.4rem;
+}
+.main-nav {
+  font-size: 1.6rem;
+}
+
+/**************************/
+/* Journey */
+/**************************/
+.section-journey {
+  padding: 3.2rem 0 9.6rem 0;
+}
+.journey {
+  max-width: 120rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  gap: 9.6rem;
+  /* background-color: #FB8200; */
+}
+
+.journey-title {
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: 0.5px;
+  margin-bottom: 2.4rem;
+}
+.journey-description {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 3.2rem;
+}
+/* .journey-img{
+  background: url('../images/Circle\ design.svg') no-repeat;
+  object-fit: cover;
+  object-position: 100%;
+} */
+.btn-journey:link,
+.btn-journey:visited {
+  background-color: var(--primary-color);
+  color: var(--color-white);
+  font-size: 1.6rem;
+  padding: 1.2rem 2.4rem;
+  border-radius: 4rem;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.btn-journey:hover,
+.btn-journey:active {
+  background-color: var(--primary-color-tint);
+}
+.journey-icon {
+  margin-left: 1rem;
+}
+.journey-img {
+  width: 100%;
+}
+
+/**************************/
+/* Section Clients */
+/**************************/
+.section-clients {
+  padding: 4.8rem 0 3.2rem 0;
+}
+.clients-border {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+  margin: 5rem;
+}
+
+/**************************/
+/* Section Collection */
+/**************************/
+.collection-title {
+  text-align: center;
+  margin-top: 10rem;
+  margin-bottom: 6rem;
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+
+.card {
+  background: #ffffff;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+.card-title {
+  font-size: 2.8rem;
+  margin-top: 1.6rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+.card-price {
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.card-icon {
+  color: var(--color-yellow);
+}
+.card-icon-rating {
+  font-size: 1.4rem;
+  margin-left: 0.5rem;
+  font-weight: 700;
+}
+.collection-star {
+  margin-bottom: 1rem;
+}
+.card-description {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.see-more {
+  text-align: end;
+}
+
+/**************************/
+/* Section See-more */
+/**************************/
+.see-more-link:link, .see-more-link:visited {
+  text-align: end;
+  margin: 5rem 0;
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+.see-more-link:active, .see-more-link:hover{
+  color: var(--primary-color-tint);
+}
+
+/**************************/
+/* Section featured-products */
+/**************************/
+.featured-product-info-box{
+  padding: 3rem;
+}
+.product-title{
+  font-size: 3rem;
+  font-weight: 700;
+  /* letter-spacing: 0.15rem; */
+  margin-bottom: 2.5rem;
+  /* margin-top: 2rem; */
+}
+.product-description{
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+}
+.btn-product:link,
+.btn-product:visited {
+  background-color: var(--primary-color);
+  color: var(--color-white);
+  font-size: 1.6rem;
+  padding: 1.2rem 2.4rem;
+  /* border-radius: .5rem; */
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.btn-product:active,
+.btn-product:hover{
+  background-color: var(--primary-color-tint);
+}
